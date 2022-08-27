@@ -1,0 +1,30 @@
+#!/bin/bash
+
+cd html5
+here=`pwd`
+url="file:///${here}/index.html"
+
+if [ "${BROWSER}" ]
+then
+  ${BROWSER} ${url}
+else
+  have_firefox=`type -p firefox`
+  if [ "${have_firefox}" ]
+  then
+    firefox ${url}
+  else
+    have_chrome=`type -p google-chrome`
+    if [ "${have_chrome}" ]
+    then
+      google-chrome ${url}
+    else
+      have_open=`type -p open`
+      if [ "${have_open}" ]
+      then
+        open ${url}
+      else
+        echo "Open ${url} in a browser"
+      fi
+    fi
+  fi
+fi
