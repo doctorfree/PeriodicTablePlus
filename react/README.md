@@ -11,8 +11,11 @@ Made with CSS Grid, React and Science!
 ## Build
 
 - Install Node.js
-- Run `npm install` command on the root directory
+- Run `npm install` command
+- Run `npm audit fix` command
 - Run `npm start` command which is defined in `package.json` scripts section
+
+Visit http://localhost:3000/
 
 ## How it was made?
 
